@@ -403,6 +403,54 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 100%;
   min-width: 100%; }
 
+.phoneIcon {
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -webkit-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  position: relative;
+  max-width: 500px;
+  margin: 0px auto;
+  background-color: #fff; }
+
+.popup__txt-phone {
+  display: block;
+  max-width: 500px;
+  padding: 60px 40px;
+  font-size: 16px;
+  color: #272727; }
+
+.popup__txt-phone h3 {
+  padding: 20px 0px;
+  color: #272727; }
+
+.form-input {
+  margin-bottom: 20px;
+  padding: 15px 0px;
+  border: 1px solid #828282; }
+
+.btn {
+  cursor: pointer;
+  display: block;
+  max-width: 280px;
+  height: 60px;
+  background-color: #e94e1b;
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  -webkit-transition: ease 0.3s;
+  -o-transition: ease 0.3s;
+  transition: ease 0.3s; }
+  .btn:hover {
+    background-color: #ff6533; }
+
 .sidebar {
   position: relative;
   height: 100%;
@@ -519,6 +567,14 @@ input[type="search"] {
   margin-bottom: 15px;
   background-color: #bdbdbd; }
 
+.info {
+  font-size: 14px;
+  -webkit-transition: ease 0.3s;
+  -o-transition: ease 0.3s;
+  transition: ease 0.3s; }
+  .info:hover {
+    padding-left: 3px; }
+
 .nav {
   margin-top: 30px; }
 
@@ -561,8 +617,8 @@ input[type="search"] {
   transition: transform 0.4s ease, -webkit-transform 0.4s ease; }
 
 .submenu.active {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 0px;
   left: 280px;
   display: block;
   width: 260px;
@@ -583,6 +639,8 @@ input[type="search"] {
   padding-left: 2em;
   padding-right: 2em;
   background: #e6e6e6;
+  -webkit-box-shadow: 2px 0px 10px rgba(2, 2, 2, 0.5);
+  box-shadow: 2px 0px 10px rgba(2, 2, 2, 0.5);
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -596,6 +654,7 @@ input[type="search"] {
 
 .submenu a {
   color: #323232;
+  text-decoration: underline;
   -webkit-transition: ease 0.3s;
   -o-transition: ease 0.3s;
   transition: ease 0.3s; }
@@ -699,7 +758,7 @@ input[type="search"] {
   position: fixed;
   z-index: 1;
   padding-top: 40px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.95);
   z-index: 1; }
 
 .top-line-menu {
@@ -743,10 +802,10 @@ input[type="search"] {
 
 .tel-button {
   display: block;
-  padding-right: 30px;
-  padding-left: 10px;
-  width: 10px;
-  height: 10px;
+  padding-right: 40px;
+  padding-left: 20px;
+  width: 30px;
+  height: 30px;
   background-image: url(img/icons/arrow-down.svg); }
 
 @media (max-width: 1180px) {
@@ -900,7 +959,7 @@ footer {
   -o-transition: ease 0.3s;
   transition: ease 0.3s; }
   .footer-item__text a:hover {
-    color: #A81428; }
+    color: #e94e1b; }
 
 .footer-items .social {
   -webkit-box-flex: 1;
@@ -913,6 +972,14 @@ footer {
 .copy {
   padding-top: 15px;
   color: #B2B2B2; }
+
+.fill {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+.social-icons a:hover svg path {
+  fill: #e94e1b; }
 
 .menu-bg.active {
   position: absolute;
@@ -1194,10 +1261,11 @@ h5 {
   margin: 0px -5px; }
 
 .news__item {
+  position: relative;
   max-width: 360px;
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 360;
-  flex: 0 0 360;
+  -ms-flex: 0 0 320px;
+  flex: 0 0 320px;
   margin-right: 20px;
   margin-bottom: 20px;
   background: #FFFFFF;
@@ -1208,6 +1276,8 @@ h5 {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25); }
 
 .news__wrap {
+  display: block;
+  height: 100%;
   padding: 20px 20px; }
 
 .news__item-img {
@@ -1222,10 +1292,12 @@ h5 {
     left: 0; }
 
 .news__item-title {
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  line-height: 150%; }
 
 .news__item-text {
   padding-bottom: 20px;
+  line-height: 150%;
   color: #828282; }
 
 .news__item-button a {
@@ -1237,7 +1309,6 @@ h5 {
     color: #323232; }
 
 .news__item-button {
-  padding-top: 30px;
   font-size: 1.125em;
   line-height: 130%; }
 
@@ -1363,7 +1434,8 @@ input[type=text], input[type=email], input[type=tel], textarea {
   border-radius: 0 !important;
   width: 100%;
   display: block;
-  padding: 0px 20px; }
+  padding: 0px 20px;
+  color: #5f5f5f; }
 
 textarea.input {
   resize: none;

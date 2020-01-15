@@ -264,3 +264,58 @@
 	max-width: 100%;
 	min-width: 100%;
 }
+
+
+//=====================popup-form=====================//
+.phoneIcon{
+	@include scale(0);
+	@include anim(0.3s, 0s);
+	position: relative;
+	max-width: 500px;
+	margin: 0px auto;
+	background-color: #fff;
+}
+.popup__txt-phone{
+	display: block;
+	max-width: 500px;
+	padding: 60px 40px;
+	font-size: 16px;
+	color: rgb(39, 39, 39);
+
+}
+.popup__txt-phone h3{
+	padding: 20px 0px;
+	color: rgb(39, 39, 39);
+}
+
+.form {
+
+}
+
+
+
+.form-input {
+
+	margin-bottom: 20px;
+	padding: 15px 0px;
+	border: 1px solid #828282;
+}
+
+
+.btn {
+	cursor: pointer;
+	display: block;
+	max-width: 280px;
+	height: 60px;
+	background-color: #e94e1b;
+	font-size: 16px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	transition: ease 0.3s;
+	&:hover{
+		background-color: #ff6533;
+	}
+}
+
+

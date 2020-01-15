@@ -61,10 +61,12 @@ input[type=text],input[type=email],input[type=tel],textarea{-webkit-appearance:n
 	width: 100%;
 	display: block;
 	padding: 0px 20px;
+	color: #5f5f5f;
 	&.focus{}
 	&.err{}
 }
 textarea.input{
+
 	resize:none;
 	padding: 0px 0px;
 }

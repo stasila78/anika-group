@@ -354,8 +354,9 @@ h5{
 
 }
 .news__item {
+	position: relative;
 	max-width: 360px;
-	flex: 0 0 360;
+	flex: 0 0 320px;
 	margin-right: 20px;
 	margin-bottom: 20px;
 	background: #FFFFFF;
@@ -364,6 +365,8 @@ h5{
 }
 
 .news__wrap{
+	display: block;
+	height: 100%;
 	padding: 20px 20px;
 }
 
@@ -383,9 +386,11 @@ h5{
 
 .news__item-title {
 	padding-bottom: 10px;
+	line-height: 150%;
 }
 .news__item-text {
 	padding-bottom: 20px;
+	line-height: 150%;
 	color: #828282;
 }
 
@@ -398,7 +403,6 @@ h5{
 }
 
 .news__item-button{
-	padding-top: 30px;
 	font-size: 1.125em;
 	line-height: 130%;
 }

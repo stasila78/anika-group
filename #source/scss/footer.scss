@@ -30,7 +30,7 @@ footer{
 	color: #242424;
 	transition: ease 0.3s;
 	&:hover{
-		color: #A81428 ;
+		color: #e94e1b ;
 	}
 }
 .footer-items .social{
@@ -41,7 +41,12 @@ footer{
 	padding-top: 15px;
 	color: #B2B2B2;
 }
-
+.fill{
+	transition: all 0.3s;
+}
+.social-icons a:hover svg path{
+	fill: #e94e1b
+}
 
 //================media footer================//
 
