@@ -1,0 +1,464 @@
+.sidebar {
+  position: relative;
+  height: 100%;
+  width: 280px;
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  padding: 20px 20px;
+  box-shadow: 1px 0px 20px #cccccc;
+  transition: ease 0.3s;
+}
+
+
+
+.logo {
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo-description {
+  font-size: 12px;
+  text-align: center;
+}
+.logo-description::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  background-color: #bdbdbd;
+}
+//--------------search--------------//
+.search {
+  width: 100%;
+  position: relative;
+}
+.search input {
+  border: none;
+}
+/* стили для поля ввода */
+.search .input {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1),
+    inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  background: #eee;
+  color: #555;
+  outline: none;
+}
+
+.search .input:focus {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2),
+    inset 0 1px 2px rgba(0, 0, 0, 0.4);
+  background: #e8e8e8;
+  color: #333;
+}
+
+.search .submit {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 45px;
+
+  /* растягиваем кнопку на всю высоту формы */
+  height: 100%;
+
+  cursor: pointer;
+  background: url(../img/icons/icon-search.svg) 50% no-repeat;
+  opacity: 0.5;
+}
+
+.search .submit:hover {
+  opacity: 0.8;
+}
+/* необходимо для того, чтобы в браузерах
+** Chrome и Safari можно было стилизовать инпуты */
+input[type="search"] {
+  -webkit-appearance: none;
+} 
+
+//-----------end search------------//
+.sidebar a {
+  color: #242424;
+  display: flex;
+  align-items: center;
+  transition: ease 0.3s;
+}
+
+.sidebar a:hover {
+  color: #a81428;
+}
+.sidebar__bottom {
+  position: absolute;
+  width: 240px;
+  bottom: 30px;
+  font-size: 16px;
+  z-index: 12;
+}
+.sidebar__bottom-line {
+  width: 100%;
+  height: 1px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #bdbdbd;
+}
+//===============menu===============//
+.nav {
+  margin-top: 30px;
+}
+
+.nav__icon {
+  padding-right: 5px;
+}
+
+.nav-link {
+  padding: 6px 0px;
+  width: 100%;
+  transition: ease 0.3s;
+  &:hover {
+    padding-left: 3px;
+  }
+}
+.nav-link li{
+	display: flex;
+}
+.subicon{
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+.subicon.active{
+	display: block;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	transform: rotate(-180deg);
+	transition: transform 0.4s ease;
+
+}
+
+.submenu.active {
+  position: absolute;
+  top: 0;
+  left: 280px;
+  display: block;
+  width: 260px;
+  height: 100vh;
+	padding-top: 80px;
+	padding-left: 2em;
+	padding-right: 2em;
+  background: rgb(230, 230, 230);
+}
+
+.submenu {
+  position: absolute;
+  top: 0px;
+  left: -100%;
+  display: block;
+  width: 260px;
+  height: 100vh;
+	padding-top: 80px;
+	padding-left: 2em;
+	padding-right: 2em;
+  background: rgb(230, 230, 230);
+  transition: all 0.3s;
+  z-index: 6;
+}
+
+.submenu li {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  width: 250px;
+}
+.submenu a{
+	color: #323232;
+	transition: ease 0.3s;
+  &:hover {
+		color: #a81428;
+    padding-left: 3px;
+  }
+
+}
+
+.nav-link ul li a:hover,
+.nav-link ul li:hover a {
+  background: rgb(255, 255, 255);
+  color: #323232;
+}
+
+
+//==================submenu burger==================//
+
+.submenu-burger {
+  position: absolute;
+  top: 18px;
+  left: 220px;
+  display: block;
+  z-index: 3;
+}
+
+.submenu__burger {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.submenu__burger:before,
+.submenu__burger:after {
+  content: "";
+  background-color: #323232;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  transition: all 0.3s ease 0s;
+}
+.submenu__burger:before {
+  top: 0;
+}
+.submenu__burger:after {
+  bottom: 0;
+}
+.submenu__burger:before {
+  transform: rotate(45deg);
+  top: 9px;
+}
+.submenu__burger:after {
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
+
+.submenu__burger {
+  &:hover {
+    transform: rotate(-180deg);
+    -webkit-transition: transform 0.4s ease;
+    -moz-transition: transform 0.4s ease;
+    -ms-transition: transform 0.4s ease;
+    -o-transition: transform 0.4s ease;
+    transition: transform 0.4s ease;
+  }
+}
+
+//========================================//
+
+.social {
+  display: flex;
+  align-items: center;
+}
+.social-icons {
+  padding-left: 5px;
+}
+.social-icons a {
+  padding-left: 7px;
+}
+.social-text {
+  text-align: right;
+  padding-left: 10px;
+  font-size: 0.7em;
+}
+
+//---------------------top-line---------------------//
+.container-topline {
+  padding-left: 280px;
+  padding-right: 40px;
+  overflow: hidden;
+}
+
+.header__burger {
+  display: none;
+}
+
+.top-line {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  z-index: 1;
+  padding-top: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+}
+
+.top-line-menu {
+  position: absolute;
+  display: flex;
+  flex: 1 0 auto;
+  left: 40px;
+  top: 23px;
+}
+.top-link a {
+  padding-right: 20px;
+  color: #242424;
+  transition: ease 0.3s;
+  &:hover {
+    color: #a81428;
+  }
+}
+.top-line__right {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 15px;
+  right: 300px;
+}
+.top-line__right a {
+  color: #242424;
+  transition: ease 0.3s;
+  &:hover {
+    color: #a81428;
+  }
+}
+
+.tel-button {
+  display: block;
+  padding-right: 30px;
+  padding-left: 10px;
+  width: 10px;
+  height: 10px;
+  background-image: url(img/icons/arrow-down.svg);
+}
+//==============media header==============//
+
+@media (max-width: 1180px) {
+  //---------burger---------//
+  .burger {
+    position: fixed;
+    top: 18px;
+    left: 20px;
+    display: block;
+    z-index: 4;
+  }
+
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .header__burger span {
+    position: absolute;
+    background-color: #323232;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header__burger:before,
+  .header__burger:after {
+    content: "";
+    background-color: #323232;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger:before {
+    top: 0;
+  }
+  .header__burger:after {
+    bottom: 0;
+  }
+
+  .header__burger.active span {
+    transform: scale(0);
+  }
+
+  .header__burger.active:before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header__burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .header__burger.active {
+    margin-left: 290px;
+    &:hover {
+      -moz-transform: rotate(-180deg);
+      -webkit-transform: rotate(-180deg);
+      -o-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+      transform: rotate(-180deg);
+      -webkit-transition: transform 0.4s ease;
+      -moz-transition: transform 0.4s ease;
+      -ms-transition: transform 0.4s ease;
+      -o-transition: transform 0.4s ease;
+      transition: transform 0.4s ease;
+    }
+  }
+
+  //----------end burger--------------//
+  .container-topline {
+    padding-left: 0px;
+  }
+
+  .sidebar {
+    left: -100%;
+  }
+  .sidebar.active {
+    left: 0px;
+  }
+
+  .top-line-menu {
+    left: 80px;
+  }
+
+  .top-line__right {
+    right: 20px;
+  }
+}
+
+@media (max-height: 565px) {
+  .sidebar__bottom {
+    position: relative;
+    margin-top: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .top-line-menu {
+    display: none;
+  }
+}
+
+/*
+	.header-menu__icon{
+		display: block;
+		position: absolute;
+		top: 18px;
+		right: 10px;
+		width:30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span{@include anim(0.3s,0s);top: 8px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
+			&:first-child{top: 0px;}
+			&:last-child{top: auto;bottom: 0px;}
+		}
+		&.active{
+			span{@include scale(0);
+				&:first-child{@include rotate(-45deg);top: 8px;}
+				&:last-child{@include rotate(45deg);bottom: 8px;}
+			}
+		}
+	}
+*/

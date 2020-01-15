@@ -1,0 +1,446 @@
+//<МИКСИНЫ>===============================================================================================
+@mixin anim($time,$delay){-webkit-transition: all $time ease $delay;-moz-transition: all $time ease $delay;-ms-transition: all $time ease $delay;-o-transition: all $time ease $delay;transition: all $time ease $delay;}
+@mixin anim_cubic($time, $delay) {-webkit-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-moz-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-ms-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-o-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;}
+@mixin rotate($deg){-moz-transform: rotate($deg);-ms-transform: rotate($deg);-webkit-transform: rotate($deg);-o-transform: rotate($deg);transform: rotate($deg);}
+@mixin scale($num){-moz-transform: scale($num);-ms-transform: scale($num);-webkit-transform: scale($num);-o-transform: scale($num);transform: scale($num);}
+@mixin skew($num){-webkit-transform: skewX($num);-moz-transform: skewX($num);-ms-transform: skewX($num);-o-transform: skewX($num);transform: skewX($num);}
+@mixin cnt($h){display: flex;flex-direction: column;height: $h;text-align: center;align-items: stretch;justify-content: center;}
+@mixin tr($x,$y,$z){transform: translate3d($x, $y, $z);};
+@mixin flexbox() {display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;font-size: 0;}
+@mixin flexorder($val){-webkit-box-ordinal-group: $val;-moz-box-ordinal-group: $val;-ms-flex-order: $val;-webkit-order: $val;order: $val;}
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:900,400,600&display=swap");
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontfamily:"Fira Sans";
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth:320px;
+$mw:100%;
+$md1:$mw+12;
+$md2:992.98;
+$md3:767.98;
+$md4:479.98;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+*{padding: 0px;margin: 0px;border: 0px;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+aside,nav,footer,header,section{display: block;}
+html,body{height: 100%;margin: 0;padding: 0;min-width: $minwidth;position: relative;width: 100%;color: #000;}
+body{font-size: 100%;line-height: 1;font-size: 14px;font-family: $fontfamily;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;
+	&.lock{
+		overflow: hidden;
+		@media (max-width:$md3+px){
+			width: 100%;
+			position: fixed;
+			overflow: hidden;
+		}
+	}
+}
+
+
+input,button,textarea{font-family: $fontfamily;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper{width: 100%;min-height: 100%;overflow: hidden;
+	&.loaded{}
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container{max-width:$mw+px;margin: 0 auto;width: 100%;
+	@media (max-width:$md1+px){max-width: 970px;}
+	@media (max-width:$md2+px){max-width: 750px;}
+	@media (max-width:$md3+px){max-width: none;padding:0 10px;}
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+@import "popup.scss";
+@import "header.scss";
+@import "footer.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.menu-bg.active{
+	position: absolute; 
+	top: 0; 
+	left: 0px; 
+	width: 100%; 
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.9);
+	z-index: 1;
+}
+
+body {
+	color: #4F4F4F;
+}
+
+p{
+	padding-top: 10px;
+	font-size: 1em;
+  line-height: 130%;
+}
+
+h1{
+	font-weight: 900;
+	font-size: 3em;
+	line-height: 100%;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+h2{
+	font-weight: 600;
+	font-size: 2.25em;
+}
+h3{
+	font-weight: 600;
+	font-size: 1.5em;
+}
+h4{
+	font-weight: 600;
+	font-size: 1.25em;
+}
+h5{
+	font-weight: 500;
+	font-size: 1em;
+	line-height: 130%;
+}
+
+.title{
+	padding-top: 60px;
+	padding-bottom: 40px;	
+}
+
+.container{
+	padding-left: 280px;
+	padding-right: 40px;
+	overflow: hidden;
+}
+
+.main {
+	margin-left: 40px;
+	padding-right: 40px; 
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+//---------------------main-banner---------------------//
+.main-banner{
+	width: 100%;
+	margin-left: 280px;
+	height: 450px;
+	position: relative;
+	// .main-screen__bg
+	&__img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+.main-banner__text {
+	max-width: 380px;
+	height: 450px;
+	padding-top: 155px;
+	padding-left: 40px;
+	color: rgb(255, 255, 255);
+	z-index: 99;
+	
+}
+
+
+
+//------------------------Slider------------------------//
+.slider {
+	width: 100%;
+	height: 450px;
+	margin-left: 280px;
+	padding-right: 280px;
+}
+.mainslider {
+	position: relative;
+	flex: 1 0 100%;
+}
+.mainslider__item {
+	height: 100%;
+}
+.mainslider__content {
+	max-width: 650px;
+	height: 450px;
+	padding-top: 100px;
+	padding-left: 40px;
+	color: rgb(255, 255, 255);
+}
+
+.mainslider__img {
+	flex: 1 0 100%;
+	position: relative;
+	// .main-screen__bg
+	&__img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+.slick-dots{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	@include flexbox();
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+}
+.slick-dots button{
+	width: 10px;
+	height: 10px;
+	border-radius: 20%;
+	background-color: rgb(170, 170, 170);
+	font-size: 0;
+	transition: ease 0.3s;
+	margin-left: 10px;
+	&:hover{
+		background-color: #A81428;
+	}
+}
+.slick-dots li[class="slick-active"] button{
+	background-color: #A81428;
+}
+//----------------------offers_small----------------------//
+.wrap-section{
+	display: flex;
+	flex-direction: column;
+	margin-right: 0px;
+	background-color: rgb(223, 223, 223);
+}
+
+.offers_small{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	padding-left: 280px;
+	overflow: hidden;
+	background-color: rgba(119, 119, 119, 0.219);
+}
+.offers_small__item{
+	display: block;
+	position: relative;
+	width: 33.333%;
+	flex: 1 1 auto;
+	min-width: 320px;
+	height: 350px;
+	padding: 30px;
+	border-bottom: 0.75px solid #828282;
+	border-right: 1px solid #828282;
+	cursor: pointer;
+	&:hover{
+		
+	}
+}
+.offers_small__item:last-child{
+	border-right: 0px;
+}
+.offers_small__title{
+	padding-bottom: 20px;
+}
+.offers_small__button{
+	position: absolute;
+	left:40px;
+	bottom: 40px;
+	text-transform: uppercase;
+	text-decoration: underline;
+	color: #242424;
+	transition: ease 0.3s;
+	&:hover{
+		color: #A81428 ;
+	}
+}
+//======================catalog======================//
+
+.catalog-list {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+
+
+}
+.catalog-card {
+	min-width: 262px;
+	flex: 1 0 23%;
+	margin-right: 30px;
+	margin-left: 0px;
+	margin-bottom: 30px;
+	position: relative;
+	border: 1px solid #f3f3f3;
+	transition: all .3s linear;
+	cursor: pointer;
+	&:hover{
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+	}
+}
+.catalog-card a{
+	color: #323232;
+}
+
+.catalog-card__price {
+	position: absolute;
+	top: 15px;
+	background-color: #e94e1b;
+	font-size: 1.125em;
+	line-height: 130%;
+	padding-top: 9px;
+	padding-bottom: 8px;
+	padding-left: 10px;
+	padding-right: 10px;	
+}
+
+.label--price {
+	color: #fff;
+}
+
+.catalog-card__image {
+	text-align: center;
+  padding-top: 20px;
+}
+.catalog-card__image img {
+	max-width: 100%;
+}
+.catalog-card__descr {
+	padding: 16px;
+	background-color: #f3f3f3;
+}
+.catalog-card__name {
+	line-height: 130%;
+	color: #505050;
+	margin-bottom: 8px;
+}
+.catalog-card__props {
+	display: flex;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	margin: 0;
+}
+
+
+//======================news======================//
+
+.news__items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0px -5px;
+
+}
+.news__item {
+	max-width: 360px;
+	flex: 0 0 360;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	background: #FFFFFF;
+	transition: ease 0.3s;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.news__wrap{
+	padding: 20px 20px;
+}
+
+.news__item-img{
+		width: 100%;
+		height: 200px;
+		position: relative;
+		// .main-screen__bg
+		&__img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+}
+
+.news__item-title {
+	padding-bottom: 10px;
+}
+.news__item-text {
+	padding-bottom: 20px;
+	color: #828282;
+}
+
+.news__item-button a{
+	color: #e94e1b;
+	transition: ease 0.3s;
+	&:hover{
+		color: #323232;
+	}
+}
+
+.news__item-button{
+	padding-top: 30px;
+	font-size: 1.125em;
+	line-height: 130%;
+}
+
+.news__button{
+	padding-top: 10px;
+	text-align: center;
+}
+.news__button a{
+	display: inline-block;
+	padding: 15px 30px;
+	margin-left: 20px;
+	color: #323232;
+	border: 1px solid #E94E1B;
+	transition: ease 0.5s;
+	&:hover{
+		background-color: #eeeeee;
+	}
+}
+//==================================================//
+
+
+//-------------------media content-------------------//
+@media (max-width: 1180px){
+	.main-banner{
+		margin-left: 0;
+	}
+	.container {
+		padding-left: 0px;	
+	}
+	.slider{
+		margin-left: 0px;
+		padding-right: 0px;	
+	}
+	.offers_small{
+		padding-left: 0px;		
+	}
+}
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+@import "forms.scss";
+@import "ui.scss";
+@import "leather-catalog.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
