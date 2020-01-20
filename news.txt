@@ -1,0 +1,84 @@
+		<section class="news">
+			<div class="container">
+				<div class="main">
+					<div class="news__title title">
+						<h2>Новости | Статьи</h2>
+					</div>
+					<div class="news__items">
+						<div class="news__item">
+							<div class="news__item-img ibg">
+								<img src="img/news/01.jpg" alt="01">
+							</div>
+							<div class="news__wrap">
+								<div class="news__item-title">
+									<h4>Интерестная статейка кожаные чумаданы</h4> 
+								</div>
+								<div class="news__item-text">
+									Краткое описание содержимого этой статьи или новости...только чуть побольше, чтобы проверить переполняемость 
+								</div>
+								<div class="news__item-button">
+									<a href="#" class="news__button">Читать ...</a>
+								</div>
+							</div>	
+						</div>
+
+						<div class="news__item">
+							<div class="news__item-img ibg">
+								<img src="img/news/02.jpg" alt="01">
+							</div>
+							<div class="news__wrap">
+								<div class="news__item-title">
+									<h4>Интерестная статья про кожу</h4> 
+								</div>
+								<div class="news__item-text">
+									Краткое описание содержимого этой статьи или новости...
+								</div>
+								<div class="news__item-button">
+									<a href="#" class="news__button">Читать ...</a>
+								</div>
+							</div>	
+						</div>
+
+							<div class="news__item">
+								<div class="news__item-img ibg">
+									<img src="img/news/03.jpg" alt="01">
+								</div>
+								<div class="news__wrap">
+									<div class="news__item-title">
+										<h4>Интерестная статья про кожу</h4> 
+									</div>
+									<div class="news__item-text">
+										Краткое описание содержимого этой статьи или новости...
+									</div>
+									<div class="news__item-button">
+										<a href="#" class="news__button">Читать ...</a>
+									</div>
+								</div>	
+							</div>
+
+							<div class="news__item">
+								<div class="news__img-wrap"></div>
+								<div class="news__item-img ibg">
+									<img src="img/news/04.jpg" alt="01">
+								</div>
+								<div class="news__wrap">
+									<div class="news__item-title">
+										<h4>Интерестная статья про кожу</h4> 
+									</div>
+									<div class="news__item-text">
+										Краткое описание содержимого этой статьи или новости...
+									</div>
+									<div class="news__item-button">
+										<a href="#" class="news__button">Читать ...</a>
+									</div>
+								</div>	
+							</div>
+
+				</div>
+<div class="bottom-wrap">
+	<a href="#"><button class="news__button-all">Все статьи</button></a>
+</div>
+				
+
+		</div>
+		</section>

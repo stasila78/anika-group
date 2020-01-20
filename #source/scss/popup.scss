@@ -212,11 +212,16 @@
 	align-items: center;
 }
 .qty__button {
-}
-.qty__button--minus{
-	margin-top: -8px;
+	background-color:#F3F3F3;
 }
 
+.qty__button--minus{
+	margin-right: 10px;
+	margin-top: -8px;
+}
+.qty__title{
+	margin-right: 10px;
+}
 .qty__val {
 	text-align: right;
 	padding: 0 10px;
@@ -225,9 +230,10 @@
 	height: 40px;
 	line-height: 38px;
 	border: 1px solid #e0e0e0;
-	margin: 0 12px;
+
 }
 .qty__button--plus {
+	margin-left: 10px;
 }
 .detail-product__sum {
 	display: flex;
@@ -265,6 +271,28 @@
 	min-width: 100%;
 }
 
+@media (max-width: 768px) {
+	.detail-product__left {
+		flex: 0 0 100%;
+		max-width: 100%;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.chars-list__item p{
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 400px) {
+	.detail-product__body{
+		padding: 20px;
+	}
+
+}
+
+
+
+
 
 //=====================popup-form=====================//
 .phoneIcon{
@@ -288,19 +316,12 @@
 	color: rgb(39, 39, 39);
 }
 
-.form {
-
-}
-
-
-
 .form-input {
 
 	margin-bottom: 20px;
 	padding: 15px 0px;
 	border: 1px solid #828282;
 }
-
 
 .btn {
 	cursor: pointer;

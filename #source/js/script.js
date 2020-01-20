@@ -257,6 +257,14 @@ $('.whouse-content-body').scroll(function(event) {
 });
 */
 
+$(".filter_label").click(function() {
+	$(".filter_label").removeClass("active");
+	var filter = $(this).addClass("active").data("filter");
+
+});
+
+
+
 
 if($('.t,.tip').length>0){
 	tip();
@@ -277,3 +285,4 @@ function tip(){
 		$(this).toggleClass('active');
 	});
 }
+

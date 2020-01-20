@@ -3,3 +3,5 @@
 //@prepros-append burger.js
 //@prepros-append menu.js
 //@prepros-append jquery.inputmask.bundle.min.js
+//@prepros-scrolltop.js
+//@prepros-append baguetteBox.js
