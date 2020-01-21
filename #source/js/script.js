@@ -260,7 +260,7 @@ $('.whouse-content-body').scroll(function(event) {
 $(".filter_label").click(function() {
 	$(".filter_label").removeClass("active");
 	var filter = $(this).addClass("active").data("filter");
-
+	
 });
 
 
@@ -285,4 +285,28 @@ function tip(){
 		$(this).toggleClass('active');
 	});
 }
+
+/* Фильтр */
+
+$(function() {
+
+	var newSelection = "";
+
+	$("#filter-nav button").click(function(){
+
+	    $("#all-filter").fadeTo(200, 0.10);
+
+		$("#filter-nav button").removeClass("active");
+		$(this).addClass("active");
+
+		newSelection = $(this).attr("rel");
+
+		$(".filter").not("."+newSelection).slideUp();
+		$("."+newSelection).slideDown();
+
+	    $("#all-filter").fadeTo(600, 1);
+
+	});
+
+});
 
