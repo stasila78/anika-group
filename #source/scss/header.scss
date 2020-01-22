@@ -67,6 +67,15 @@
     padding-left: 3px;
   }
 }
+.nav__icon{
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	margin-top: -px;
+	background: url(../img/icons/info.svg) 0 0/cover no-repeat;
+
+}
 
 //===============search===============//
 .search {
@@ -107,6 +116,7 @@
   background: url(../img/icons/icon-search.svg) 50% no-repeat;
   opacity: 0.5;
 }
+
 
 .search .submit:hover {
   opacity: 0.8;
@@ -336,7 +346,7 @@ input[type="search"] {
 	text-align: center;
 	padding-top: 3px;
 	position: absolute;
-	background-color: #a81428;
+	background-color: #e94e1b;
 	border-radius: 50%;
 	color: #fff;
 	top: -7px;
